@@ -15,6 +15,38 @@ The few-shot training examples are selected from the training set following thre
 3. Relevant: Find training examples most similar to the test instance (use text similarity AND embedding-based similarity).
 The evaluation results are reported considering the above settings.
 
+# Experiment Results
+
+This section contains the results from our experiments using GPT-3 for Natural Language Inference (NLI) tasks. We employed a variety of approaches: zero-shot, fixed, random, and relevant. 
+
+## GPT-3 Results
+
+The performance of GPT-3 was found to be below average for most of the methods used. Here is an overview of the results:
+
+- Zero-shot:
+  - Accuracy: 0.456 for Prompt 1, 0.444 for Prompt 2
+- Fixed:
+  - Accuracy: 0.66 for Prompt 1, 0.508 for Prompt 2
+- Random:
+  - Accuracy: 0.672 for Prompt 1, 0.5 for Prompt 2
+- Relevant:
+  - Accuracy: 0.768 for Prompt 1, 0.548 for Prompt 2
+
+The results for the test data were quite discouraging, with the model scoring 0% accuracy for all the methods used.
+
+- Zero-shot (Test Data):
+  - Accuracy: 0.0 for both Prompt 1 and Prompt 2
+- Fixed (Test Data):
+  - Accuracy: 0.0 for both Prompt 1 and Prompt 2
+- Random (Test Data):
+  - Accuracy: 0.0 for both Prompt 1 and Prompt 2
+- Relevant (Test Data):
+  - Accuracy: 0.0 for Prompt 1
+
+Despite these results, there is still room for improvement, especially in handling contradiction and neutral cases. Also, the 'unknown' category was not tested in these experiments but should be included in future iterations.
+
+These experiments were conducted using the CommonGen benchmark dataset, designed specifically for testing the text generation capabilities of language models. Further testing on other datasets might yield different results.
+
 ## Project Dependencies
 Before running the project, you need to install a few python packages as:
 
