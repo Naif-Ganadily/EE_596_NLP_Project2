@@ -1,5 +1,5 @@
 # EE_596_NLP_Project2
-## Investigating Zero-Shot and Few-Shot Prompting with OpenAI's GPT-3 in Natural Language Processing
+## Exploring GPT-3 API through Zero-Shot and Few-Shot Prompting in Natural Language Processing
 The primary objective of this project is to probe the potential of OpenAI's GPT-3 through zero-shot and few-shot prompting methods in the Natural Language Processing (NLP) domain. This investigation leverages the SuperGLUE datasets, focusing on multiple prompts and experimentation strategies to scrutinize the depth of GPT-3's NLP capabilities.
 
 ## Student: Naif Ganadily
