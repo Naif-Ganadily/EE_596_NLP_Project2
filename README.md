@@ -42,7 +42,7 @@ The performance on the test data was disappointing, with 0% accuracy across all 
 - Random (Test Data):
   - Accuracy: 0.0 for both Prompt 1 and Prompt 2
 - Relevant (Test Data):
-  - Accuracy: 0.0 for Prompt 1
+  - Accuracy: 0.0 for Prompt 1 and Prompt 2
 
 Despite the underwhelming results, opportunities for improvement exist, especially in dealing with contradiction and neutral cases. Additionally, the 'unknown' category, which was not included in these experiments, could be a focus for future tests.
 
