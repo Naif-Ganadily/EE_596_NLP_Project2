@@ -1,27 +1,28 @@
 # EE_596_NLP_Project2
-## Exploring GPT-3 API through Zero-Shot and Few-Shot Prompting in Natural Language Processing
-This project aims to explore the capabilities of the OpenAI's GPT-3 API with the implementation of zero-shot and few-shot prompting techniques using the SuperGLUE datasets. The exploration further comprises different prompts and experiment methods to delve deeper into GPT-3's capabilities in Natural Language Processing (NLP).
+## Investigating Zero-Shot and Few-Shot Prompting with OpenAI's GPT-3 in Natural Language Processing
+The primary objective of this project is to probe the potential of OpenAI's GPT-3 through zero-shot and few-shot prompting methods in the Natural Language Processing (NLP) domain. This investigation leverages the SuperGLUE datasets, focusing on multiple prompts and experimentation strategies to scrutinize the depth of GPT-3's NLP capabilities.
 
 ## Student: Naif Ganadily
 ## Professor: Chandra Bhagavatula
-## Due Date: March 16
-## Project Description:
-This exploration involves downloading five datasets (COPA, RTE, WSC, ReCoRD, and CommitmentBank) from SuperGLUE and applying zero-shot and few-shot prompting techniques (up to 5 examples chosen from the training set) for each dataset. The project uses two distinct prompts for each dataset and evaluates the results across various settings.
+## Deadline: March 16
 
-The few-shot training examples are selected from the training set following three strategies:
+## Project Synopsis:
+Five datasets (COPA, RTE, WSC, ReCoRD, and CommitmentBank) from SuperGLUE are utilized in this project. Both zero-shot and few-shot prompting methods (with up to 5 examples from the training set) are applied to each dataset. The prompts are varied and the results evaluated across diverse configurations.
 
-1. Fixed: Choose training examples once, using them for all test instances.
-2. Random: Randomly select N training examples for each test instance.
-3. Relevant: Find training examples most similar to the test instance (use text similarity AND embedding-based similarity).
-The evaluation results are reported considering the above settings.
+The few-shot training examples are chosen from the training set based on three strategies:
+1. Fixed: Consistent use of the same training examples for all test instances.
+2. Random: Selection of N training examples at random for each test instance.
+3. Relevant: Determination of the most similar training examples to the test instance (both text and embedding-based similarity considered).
 
-# Experiment Results
+The outcomes of the evaluations, reflecting the above scenarios, are reported in the subsequent section.
 
-This section contains the results from our experiments using GPT-3 for Natural Language Inference (NLI) tasks. We employed a variety of approaches: zero-shot, fixed, random, and relevant. 
+# Experiment Outcomes
 
-## GPT-3 Results
+The results from our experiments using GPT-3 in the Natural Language Inference (NLI) tasks are listed below. Various approaches: zero-shot, fixed, random, and relevant were deployed.
 
-The performance of GPT-3 was found to be below average for most of the methods used. Here is an overview of the results:
+## GPT-3 Performance
+
+GPT-3's performance was found wanting in most of the methods used. Here's a snapshot of the outcomes:
 
 - Zero-shot:
   - Accuracy: 0.456 for Prompt 1, 0.444 for Prompt 2
@@ -32,7 +33,7 @@ The performance of GPT-3 was found to be below average for most of the methods u
 - Relevant:
   - Accuracy: 0.768 for Prompt 1, 0.548 for Prompt 2
 
-The results for the test data were quite discouraging, with the model scoring 0% accuracy for all the methods used.
+The performance on the test data was disappointing, with 0% accuracy across all methodologies.
 
 - Zero-shot (Test Data):
   - Accuracy: 0.0 for both Prompt 1 and Prompt 2
@@ -43,50 +44,41 @@ The results for the test data were quite discouraging, with the model scoring 0%
 - Relevant (Test Data):
   - Accuracy: 0.0 for Prompt 1
 
-Despite these results, there is still room for improvement, especially in handling contradiction and neutral cases. Also, the 'unknown' category was not tested in these experiments but should be included in future iterations.
+Despite the underwhelming results, opportunities for improvement exist, especially in dealing with contradiction and neutral cases. Additionally, the 'unknown' category, which was not included in these experiments, could be a focus for future tests.
 
-These experiments were conducted using the CommonGen benchmark dataset, designed specifically for testing the text generation capabilities of language models. Further testing on other datasets might yield different results.
+These experiments were conducted using the CommonGen benchmark dataset, specifically created for evaluating the text generation prowess of language models. It's important to note that running similar tests on other datasets could lead to varying results.
 
-## Project Dependencies
-Before running the project, you need to install a few python packages as:
-
+## Project Requirements
+Before executing the project, ensure the following python packages are installed:
 
 !pip install jsonlines
 !pip install openai
 !pip install sentence_transformers
 
-## Project Code
-The project uses several libraries including 'jsonlines', 'openai', 'sentence_transformers', 'numpy', 'pandas', 'matplotlib', and 'sklearn' to accomplish the tasks. The complete code is available in Python script format and Jupyter Notebook.
 
-The key functionalities of the code include loading data, generating few-shot examples, making predictions with GPT-3, evaluating the predictions, and generating confusion matrices for visualization of results.
+## Project Implementation
+The project leverages several libraries including 'jsonlines', 'openai', 'sentence_transformers', 'numpy', 'pandas', 'matplotlib', and 'sklearn' to accomplish its goals. The complete code can be accessed in either Python script or Jupyter Notebook format.
 
-To use the code, simply clone the repository, install the dependencies, and run the provided Python scripts or Jupyter Notebooks.
+The code carries out several tasks including data loading, generating few-shot examples, making predictions with GPT-3, evaluating the predictions, and creating confusion matrices for result visualization.
+
+To use the code, clone the repository, install the necessary dependencies, and run the provided Python scripts or Jupyter Notebooks.
 
 ## Results
-The results of the exploration are available in a comprehensive report detailing the evaluation metrics across the five datasets considering various scenarios implemented. The Python scripts provide confusion matrices and classification reports for detailed insights into the performance of the model across various settings.
+The exploration results are presented in a detailed report that outlines the evaluation metrics across all five datasets, taking into account the different scenarios implemented. The Python scripts provide confusion matrices and classification reports, offering in-depth insight into the model's performance under various settings.
 
-Please note: Always remove your API Keys before submitting or sharing your code.
+Please remember to remove your API Keys before submitting or sharing your code.
 
 ## Usage
-To use this repository:
+To utilize this repository:
 
 1. Clone the repository to your local machine.
-2. Install the necessary dependencies mentioned in the Project Dependencies section.
-3. Add your OpenAI API Key in the space provided in the scripts.
+2. Install the necessary dependencies as mentioned in the Project Requirements section.
+3. Insert your OpenAI API Key in the appropriate space in the scripts.
 4. Update the path to your datasets in the code.
 5. Run the Python scripts or Jupyter Notebooks to execute the project.
 
-## Project Repository Structure
-The project repository consists of the following key files:
-
-1. README.md: A markdown file containing information about the project and instructions on how to use the code.
-2. main.py: The primary Python script containing the implementation of the project.
-3. requirements.txt: A text file containing the necessary Python packages needed to run the script.
-4. classification_report.txt: A text file containing the classification report of the model's predictions.
-5. project_notebook.ipynb: A Jupyter Notebook containing the implementation of the project with detailed explanations of the code.
-
 ## Contribution
-This project is conducted by Naif Ganadily, under the guidance of Professor Chandra Bhagavatula. Please feel free to fork this repository for research and development purposes. Contributions to improve this project are welcomed. Please consider submitting a pull request if you wish to contribute.
+This project was conducted by Naif Ganadily under the guidance of Professor Chandra Bhagavatula. Forking this repository for research and development purposes is encouraged. Contributions aimed at enhancing this project are warmly welcomed. Please consider submitting a pull request if you'd like to contribute.
 
 ## License
-This project is licensed under the terms of the MIT
+This project is governed by the terms of the MIT license.
